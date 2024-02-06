@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { TbLetterX } from "react-icons/tb";
+import { RxCross2 } from "react-icons/rx";
 import logo from "./images/circular logos.png";
 
 export default function Navbar() {
   // const [isOpen, setIsOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  // const toggleMenu = () => {
-  //   setIsOpen(!isOpen);
-  // };
 
   window.addEventListener("resize", () => {
     setScreenWidth(window.innerWidth);
@@ -25,30 +22,20 @@ export default function Navbar() {
   function handleHamburger() {
     setShowMenu((prev) => !prev);
   }
-console.log(showMenu);
-  // const menuStyle = {
-  //   // display: isOpen ? "block" : "none",
-  // };
-  return (
-    // <div className={`hamburger-menu ${isOpen ? "open" : ""}`}>
-    //   <div className="nav--container">
-    //     <img src={logo} className="logo--image" />
-    //     <div className="hamburger-icon" onClick={toggleMenu}>
-    //       <span></span>
-    //       <span></span>
-    //       <span></span>
-    //     </div>
 
+  return (
     <nav className="menu-items">
+      <div className="logo">
+        <img src={logo} alt="logo of TECHINO" className="logo__image" />
+      </div>
       <div className={`hamburger `} onClick={handleHamburger}>
-        {/* {showMenu ? (
-          <TbLetterX className="hamburger_menu" />
-        ) : ( */}
-        <GiHamburgerMenu className="hamburger_menu" />
-        {/* )} */}
+        {showMenu ? (
+          <RxCross2 className="hamburger_menu" />
+        ) : (
+          <GiHamburgerMenu className="hamburger_menu" />
+        )}
       </div>
 
-      {/* {showMenu && ( */}
       <ul className={showMenu ? "open" : "close"}>
         <li>
           <a href="./">Home</a>
@@ -66,7 +53,6 @@ console.log(showMenu);
           <a href="#">Sign Up</a>
         </li>
       </ul>
-      {/* )} */}
     </nav>
     // )}
     // </div>
