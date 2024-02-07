@@ -64,6 +64,10 @@
 .logo__image {
   width: 100%;
 }
+.techino{
+  font-size: 2rem; 
+  margin: 0;
+}
 .hamburger {
   display: flex;
   justify-content: center;
@@ -85,7 +89,10 @@
   position: absolute;
   background: #fbae3c;
   animation: animate_item;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
+}
+.main--header {
+  /* font-size: 2.5rem; */
 }
 @keyframes animate_item {
   from {
@@ -100,16 +107,19 @@
 .menu-items .close {
   display: none;
 }
-
+.hamburger svg.hamburger_menux {
+  fill: #a06f20;
+  width: 31px;
+  height: 31px;
+}
 .hamburger_menu {
   width: 43px;
   height: 43px;
-  fill: #362f24;
+  fill: #a06f20;
 }
 .menu-items .open li {
   cursor: pointer;
   padding: 1rem 1.5rem;
-  /* box-shadow: 0px 1px 1px rgba(17, 16, 16, 0.3); */
 }
 .menu-items li a {
   text-decoration: none;
@@ -128,7 +138,7 @@
     background-color: #fff;
     width: 100%;
     animation-name: animate;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
   .logo {
     width: 180px;

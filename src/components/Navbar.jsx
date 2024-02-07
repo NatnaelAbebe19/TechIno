@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross2 } from "react-icons/rx";
+import { ImCross } from "react-icons/im";
 import logo from "./images/circular logos.png";
+import debounce from "lodash.debounce";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  window.addEventListener("resize", () => {
-    setScreenWidth(window.innerWidth);
-  });
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      setScreenWidth(window.innerWidth);
+    }, 200);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (screenWidth >= 768) {
@@ -30,7 +39,7 @@ export default function Navbar() {
       </div>
       <div className={`hamburger `} onClick={handleHamburger}>
         {showMenu ? (
-          <RxCross2 className="hamburger_menu" />
+          <ImCross className="hamburger_menux" />
         ) : (
           <GiHamburgerMenu className="hamburger_menu" />
         )}

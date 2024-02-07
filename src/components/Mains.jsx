@@ -8,7 +8,7 @@ export default function Mains() {
 
   return (
     <main className="main--container">
-      
+      <h1 className="techino">TECH<em>INO</em></h1>
       <h1 className="main--header">Let's Talk About The Future!</h1>
       <button className="member--btn">Be a Member</button>
     </main>
