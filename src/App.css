@@ -54,11 +54,10 @@
   }
 }
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 100px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
   z-index: 55;
   margin-right: auto;
 }
@@ -84,7 +83,7 @@
   top: 60px;
   left: 0px;
   position: absolute;
-  background: #b4781c;
+  background: #fbae3c;
   animation: animate_item;
   animation-duration: 1s;
 }
@@ -109,8 +108,8 @@
 }
 .menu-items .open li {
   cursor: pointer;
-  padding: 1rem;
-  box-shadow: 0px 1px 1px rgba(17, 16, 16, 0.3);
+  padding: 1rem 1.5rem;
+  /* box-shadow: 0px 1px 1px rgba(17, 16, 16, 0.3); */
 }
 .menu-items li a {
   text-decoration: none;
@@ -131,9 +130,18 @@
     animation-name: animate;
     animation-duration: 1s;
   }
+  .logo {
+    width: 180px;
+    top: 0;
+    left: 0;
+  }
   .menu-items .open {
     position: absolute;
     top: 0px;
+    background-color: #fbae3c;
+    height: 80px;
+    display: flex;
+    align-items: center;
   }
 
   .hamburger {
@@ -143,8 +151,6 @@
   .menu-items ul {
     display: flex;
     justify-content: flex-end;
-    /* position: absolute; */
-    /* top: 0; */
   }
 
   .menu-items li {
@@ -162,7 +168,6 @@
     display: flex;
   }
 }
-
 /*Hero*/
 .main--container button.member--btn {
   font-size: 1rem;
@@ -180,7 +185,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
   background-image: url("./components/images/blob-scene-haikei.svg");
   background-repeat: no-repeat;
   background-size: cover;

@@ -4,7 +4,6 @@ import { RxCross2 } from "react-icons/rx";
 import logo from "./images/circular logos.png";
 
 export default function Navbar() {
-  // const [isOpen, setIsOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -19,6 +18,7 @@ export default function Navbar() {
       setShowMenu(false);
     }
   }, [screenWidth]);
+
   function handleHamburger() {
     setShowMenu((prev) => !prev);
   }
@@ -54,7 +54,5 @@ export default function Navbar() {
         </li>
       </ul>
     </nav>
-    // )}
-    // </div>
   );
 }
