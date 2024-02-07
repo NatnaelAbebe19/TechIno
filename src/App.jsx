@@ -14,8 +14,8 @@ function App() {
       <Mains />
       {/* <Login /> */}
       {/* <Signup /> */}
+      <Blog />
       <Footer />
-      {/* <Blog /> */}
     </section>
   );
 }
