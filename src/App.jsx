@@ -1,21 +1,36 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import Mains from "./components/Mains";
 import Login from "./components/login";
 import Signup from "./components/Signup";
 import Footer from "./components/footer";
+import Error from "./components/Error";
 import Blog from "./components/Blog";
+import SharedLayout from "./components/SharedLayout";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <section className="app--container">
-      <Navbar />
-      <Mains />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<Mains />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="footer" element={<Footer />} />
+            <Route path="*" element={<Error />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      {/* <Navbar /> */}
+      {/* <Mains /> */}
       {/* <Login /> */}
       {/* <Signup /> */}
-      <Blog />
-      <Footer />
+      {/* <Blog /> */}
+      {/* <Footer /> */}
     </section>
   );
 }

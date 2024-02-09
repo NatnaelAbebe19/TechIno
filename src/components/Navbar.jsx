@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import logo from "./images/circular logos.png";
 import debounce from "lodash.debounce";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -46,21 +47,46 @@ export default function Navbar() {
       </div>
 
       <ul className={showMenu ? "open" : "close"}>
-        <li>
-          <a href="./">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Event</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
-        <li>
-          <a href="#">Sign Up</a>
-        </li>
+        <NavLink
+          to="/"
+          className={({ isActive }) => {
+            return isActive ? "link active" : "link";
+          }}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => {
+            return isActive ? "link active" : "link";
+          }}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/event"
+          className={({ isActive }) => {
+            return isActive ? "link active" : "link";
+          }}
+        >
+          Event
+        </NavLink>
+        <NavLink
+          to="/login"
+          className={({ isActive }) => {
+            return isActive ? "link active" : "link";
+          }}
+        >
+          Login
+        </NavLink>
+        <NavLink
+          to="/signup"
+          className={({ isActive }) => {
+            return isActive ? "link active" : "link";
+          }}
+        >
+          Signup
+        </NavLink>
       </ul>
     </nav>
   );

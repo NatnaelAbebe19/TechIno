@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [inputs, setInputs] = useState({
@@ -140,7 +141,7 @@ export default function Signup() {
         </div>
         <button className="signIn">Sign up</button>
         <p>
-          Already have an account <a href="#">Sign In</a>
+          Already have an account <Link to="/login">Sign In</Link>
         </p>
       </form>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [inputs, setInputs] = useState({
@@ -16,7 +17,7 @@ function Login() {
 
   function handleChange(event) {
     setInputs((prevInput) => {
-      const { value, name, type } = event.target;
+      const { value, name } = event.target;
       return {
         ...prevInput,
         [name]: value,
@@ -74,7 +75,7 @@ function Login() {
 
         <button className="signIn">Sign in</button>
         <p>
-          Don't have an account <a href="#">SignUp</a>
+          Don't have an account <Link to="/signup">SignUp</Link>
         </p>
       </form>
     </div>
