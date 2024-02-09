@@ -1,16 +1,25 @@
 import React from "react";
-import background from "./images/wave-haikei.svg";
+import Back from "./images/back.mp4";
+import Blog from "./Blog";
 
 export default function Mains() {
-    const backgroundImageUrl = "./images/wave-haikei.svg"
-    const backgrounds = {
-    }
-
   return (
-    <main className="main--container">
-      <h1 className="techino">TECH<em>INO</em></h1>
-      <h1 className="main--header">Let's Talk About The Future!</h1>
-      <button className="bn5">Be a Member</button>
-    </main>
+    <>
+      <main className="main--container">
+        <div className="hero-section">
+          <video autoPlay loop mmuted playsInline>
+            <source src={Back} type="video/mp4" />
+          </video>
+        </div>
+        <div className="member-adding">
+          <h1 className="techino">
+            <span className="techlogo">&equiv;</span>TECH<em>INO</em>
+          </h1>
+          <h1 className="main--header">Let's Talk About The Future!</h1>
+          <button className="bn5">Be a Member</button>
+        </div>
+      </main>
+      <Blog />
+    </>
   );
 }

@@ -20,7 +20,6 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
             <Route path="blog" element={<Blog />} />
-            <Route path="footer" element={<Footer />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>
@@ -29,7 +28,6 @@ function App() {
       {/* <Mains /> */}
       {/* <Login /> */}
       {/* <Signup /> */}
-      {/* <Blog /> */}
       {/* <Footer /> */}
     </section>
   );

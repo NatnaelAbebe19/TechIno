@@ -64,8 +64,14 @@
   width: 100%;
 }
 .techino {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
+  display: flex;
+  align-items: center;
+}
+.techlogo {
+  font-size: 3rem;
+  margin-right: 10px;
 }
 .hamburger {
   display: flex;
@@ -88,7 +94,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  background: #fbae3c;
+  background: #638689;
   animation: animate_item;
   animation-duration: 0.5s;
 }
@@ -120,14 +126,12 @@
   padding: 1rem 1.5rem;
 }
 
-.active {
-  color: green;
-}
-
 .menu-items .link {
   text-decoration: none;
   font-size: 1rem;
-  color: #000;
+  color: #fff;
+  /* color: rgb(0, 21, 128); */
+  background-color: #1edeec;
 }
 
 .error {
@@ -236,7 +240,8 @@
   .menu-items .open {
     position: absolute;
     top: 0px;
-    background-color: #fbae3c;
+    background-color: #1edeec;
+    overflow: hidden;
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -258,10 +263,11 @@
   }
 
   .menu-items .link.active {
-    color: green;
+    color: rgb(0, 21, 128);
   }
 
   .menu-items .link {
+    color: #fff;
     transition: all 0.4s ease-in-out;
   }
 
@@ -276,7 +282,7 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background-image: url("./components/images/blob-scene-haikei.svg");
+  /* background-image: url("./components/images/blob-scene-haikei.svg"); */
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -292,6 +298,28 @@
   .main--container .main--header {
     font-size: 3rem;
   }
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -99;
+}
+.hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.member-adding {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /*Login*/
 .login {
@@ -396,7 +424,7 @@ button.signIn:hover {
 /*Footer*/
 .footer {
   /* position: absolute; */
-  /* bottom: 0px; */
+  /* bottom: 0; */
   padding: 1rem;
   background: #ddd;
   display: grid;

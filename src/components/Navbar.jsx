@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import logo from "./images/circular logos.png";
 import debounce from "lodash.debounce";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -36,7 +36,9 @@ export default function Navbar() {
   return (
     <nav className="menu-items">
       <div className="logo">
-        <img src={logo} alt="logo of TECHINO" className="logo__image" />
+        <Link to="/">
+          <img src={logo} alt="logo of TECHINO" className="logo__image" />
+        </Link>
       </div>
       <div className={`hamburger `} onClick={handleHamburger}>
         {showMenu ? (

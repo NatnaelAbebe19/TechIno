@@ -74,13 +74,6 @@ export default function Signup() {
       event.preventDefault();
       alert("Password must be greater than 8 characters");
     }
-    // if (
-    //   typeof inputs.password === "string" &&
-    //   typeof inputs.password === "number"
-    // ) {
-    //   event.preventDefault();
-    //   alert("Password must container both string and number");
-    // }
   }
 
   return (
