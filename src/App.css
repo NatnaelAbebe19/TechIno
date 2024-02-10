@@ -584,3 +584,81 @@ button.signIn:hover {
 }
 
 /*Blog*/
+.profile--container {
+  width: 75%;
+  margin: 0 auto;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  /* background: dodgerblue; */
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.profile--notation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.profile--image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: auto;
+  overflow: hidden;
+}
+.profile--image img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile--btn1 {
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.profile--btn2 {
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+}
+
+.profile--btn2:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.profile--btn2:hover {
+  color: rgb(0, 0, 0);
+}
+
+.profile--btn2:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.profile--btn2:active {
+  top: 2px;
+}

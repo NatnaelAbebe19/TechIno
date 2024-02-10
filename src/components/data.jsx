@@ -1,43 +1,54 @@
+import Fan from "./images/fan.jfif";
+import Eyu from "./images/eyu.png";
+import Yg from "./images/YG.png";
+import Gech from "./images/gech.png";
+import Nati from "./images/nati.jpg";
+import Dave from "./images/dave.png";
+
 const data = [
   {
     name: "Fanuel",
-    image: "./images/fan.jfif",
+    imag: Fan,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
+
   {
     name: "Eyouel Topazion",
-    image: "./images/eyu.png",
+    imag: Eyu,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
+
   {
     name: "Yonas Yihun",
-    image: "./images/TG.png",
+    imag: Yg,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
+
   {
     name: "Getasew Adane",
-    image: "./images/gech.png",
+    imag: Gech,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
+
   {
     name: "Yabsra",
-    image: "./images/gech.png",
+    imag: Gech,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
   {
     name: "Natnael Abebe",
-    image: "./images/nati.jpg",
+    imag: Nati,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
   {
     name: "Dawit Habitamu",
-    image: "./images/dave.png",
+    imag: Dave,
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
