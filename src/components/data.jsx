@@ -1,54 +1,47 @@
-import Fan from "./images/fan.jfif";
-import Eyu from "./images/eyu.png";
-import Yg from "./images/YG.png";
-import Gech from "./images/gech.png";
-import Nati from "./images/nati.jpg";
-import Dave from "./images/dave.png";
-
 const data = [
   {
-    name: "Fanuel",
-    imag: Fan,
+    name: "Fanuel Eshetu",
+    imag: "src/components/images/fan.jfif",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
 
   {
-    name: "Eyouel Topazion",
-    imag: Eyu,
+    name: "Eyouel Amare",
+    imag: "src/components/images/eyu.png",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
 
   {
-    name: "Yonas Yihun",
-    imag: Yg,
+    name: "Yonas Getnet",
+    imag: "src/components/images/YG.png",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
 
   {
     name: "Getasew Adane",
-    imag: Gech,
+    imag: "src/components/images/gech.png",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
 
   {
     name: "Yabsra",
-    imag: Gech,
+    imag: "src/components/images/gech.png",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
   {
     name: "Natnael Abebe",
-    imag: Nati,
+    imag: "src/components/images/nati.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },
   {
     name: "Dawit Habitamu",
-    imag: Dave,
+    imag: "src/components/images/dave.png",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, officiis impedit repellat numquam necessitatibus aliquam nihil laborum officia. Neque, praesentium eos!",
   },

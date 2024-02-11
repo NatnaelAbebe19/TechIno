@@ -29,6 +29,15 @@ export default function Navbar() {
     }
   }, [screenWidth]);
 
+  // const menu = document.querySelector(".open");
+  // window.addEventListener("click", (event) => {
+  //   if (screenWidth < 768) {
+  //     if (event.target !== menu) {
+  //       setShowMenu(false);
+  //     }
+  //   }
+  // });
+
   function handleHamburger() {
     setShowMenu((prev) => !prev);
   }

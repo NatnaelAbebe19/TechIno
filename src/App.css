@@ -88,23 +88,23 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 50%;
   top: 60px;
-  left: 0px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   position: absolute;
-  background: #638689;
+  background: transparent;
   animation: animate_item;
   animation-duration: 0.5s;
 }
 @keyframes animate_item {
   from {
-    transform: translateY(-50%);
+    transform: translateX(50%);
     opacity: 0;
   }
   to {
-    transform: translateY(0%);
+    transform: translateX(0%);
     opacity: 1;
   }
 }
@@ -112,26 +112,31 @@
   display: none;
 }
 .hamburger svg.hamburger_menux {
-  fill: #a06f20;
+  fill: #ccc;
   width: 31px;
   height: 31px;
 }
 .hamburger_menu {
   width: 43px;
   height: 43px;
-  fill: #a06f20;
+  fill: #ccc;
 }
 .menu-items .open .link {
   cursor: pointer;
   padding: 1rem 1.5rem;
+  box-shadow: 0 2px 0 #18148a;
+  background: #02003b;
+  /* box-shadow: 2px 3px 2px #03013E; */
 }
 
 .menu-items .link {
+  box-shadow: 3px 2px 2px #454387;
   text-decoration: none;
   font-size: 1rem;
   color: #fff;
+  margin-bottom: 1px;
   /* color: rgb(0, 21, 128); */
-  background-color: #1edeec;
+  /* background-color: #13107c; */
 }
 
 .error {
@@ -240,14 +245,18 @@
   .menu-items .open {
     position: absolute;
     top: 0px;
-    background-color: #1edeec;
+    box-shadow: 0 2px 30px 3px #353195;
+    background-color: #03013e;
     overflow: hidden;
     height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
   }
-
+  .menu-items .open .link {
+    box-shadow: none;
+  }
   .error {
     margin: 6rem 1.5rem;
     color: red;
@@ -264,6 +273,7 @@
 
   .menu-items .link.active {
     color: rgb(0, 21, 128);
+    color: #07d9de;
   }
 
   .menu-items .link {
@@ -378,9 +388,9 @@ button.signIn:hover {
 }
 
 .signIn .text {
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   background-image: linear-gradient(45deg, #4568dc, #b06ab3);
 }
 
@@ -585,7 +595,7 @@ button.signIn:hover {
 
 /*Blog*/
 .profile--container {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
 }
 .profile {
@@ -617,48 +627,89 @@ button.signIn:hover {
   width: 100%;
   height: 100%;
 }
-
 .profile--btn1 {
-  padding: 10px 25px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  background: transparent;
-  outline: none !important;
+  background: linear-gradient(
+    90deg,
+    rgb(23, 47, 228) 0%,
+    hsla(197, 100%, 64%, 1) 100%
+  );
+  transition: all 0.9s ease;
+  padding: 7px;
+  color: #fff;
+  border-radius: 5px;
+  width: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation: bn53bounce 4s infinite;
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
 }
 
-.profile--btn2 {
-  border: 2px solid rgb(255, 255, 255);
-  z-index: 1;
-  color: white;
+.profile--btn1:hover {
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 64%, 1) 0%,
+    rgb(23, 47, 228) 100%
+  );
 }
 
-.profile--btn2:after {
+@keyframes bn53bounce {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1) rotate(0);
+  }
+}
+ul.slick-dots {
   position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  direction: rtl;
-  z-index: -1;
-  background: rgb(255, 255, 255);
-  transition: all 0.3s ease;
+  bottom: 0;
 }
 
-.profile--btn2:hover {
-  color: rgb(0, 0, 0);
+/* .slick-prev {
+  padding: 1rem;
+  width: 40px;
+  height: 40px;
+  background-image: url("./components/images/left.png");
+  background-position: center;
+  background-size: cover;
+} */
+
+.slick-prev {
+  left: -60px;
+}
+.slick-prev::before,
+.slick-next::before {
+  cursor: pointer;
+  padding: 2rem;
+  font-size: 2rem;
+  color: rgb(63, 63, 178);
 }
 
-.profile--btn2:hover:after {
-  left: auto;
-  right: 0;
-  width: 100%;
-}
-
-.profile--btn2:active {
-  top: 2px;
+.slick-next {
+  right: 14px;
 }

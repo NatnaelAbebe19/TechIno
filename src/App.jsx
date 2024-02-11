@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Mains from "./components/Mains";
 import Login from "./components/login";
 import Signup from "./components/Signup";
@@ -11,6 +11,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
+  // const [show, setShow] = useState(false);
+  // // function handleBody() {
+
+  // // }
   return (
     <section className="app--container">
       <BrowserRouter>
