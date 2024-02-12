@@ -43,6 +43,7 @@ function Blog() {
 
   return (
     <div className="profile--container">
+      <h2 className="profile--header">Members</h2>
       <Slider {...settings}>
         {Datas.map((Data) => (
           <div className="profile">

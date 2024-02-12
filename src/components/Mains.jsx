@@ -1,7 +1,7 @@
 import React from "react";
 import Back from "./images/back.mp4";
 import Blog from "./Blog";
-
+import Services from "./services";
 export default function Mains() {
   return (
     <>
@@ -19,7 +19,9 @@ export default function Mains() {
           <button className="bn5">Be a Member</button>
         </div>
       </main>
+      <Services />
       <Blog />
+      
     </>
   );
 }
