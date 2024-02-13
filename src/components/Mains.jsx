@@ -2,6 +2,7 @@ import React from "react";
 import Back from "./images/back.mp4";
 import Blog from "./Blog";
 import Services from "./services";
+import Projects from "./projects";
 export default function Mains() {
   return (
     <>
@@ -20,8 +21,8 @@ export default function Mains() {
         </div>
       </main>
       <Services />
+      <Projects />
       <Blog />
-      
     </>
   );
 }

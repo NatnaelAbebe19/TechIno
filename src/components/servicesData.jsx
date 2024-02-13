@@ -2,7 +2,7 @@ const data = [
   {
     title: "Web Developement",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    imag: "src/components/images/web.jfif",
+    imag: "src/components/images/web.png",
   },
   {
     title: "App Developement",

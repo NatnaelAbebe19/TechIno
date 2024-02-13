@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Datas from "./servicesData";
 
@@ -11,10 +11,31 @@ export default function services() {
     speed: 500,
   };
 
-  const [isVisible, setIsvisible] = useState(false);
+  // const [isVisible, setIsvisible] = useState(false);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const element = document.getElementById("services--containers");
+  //     const position = element.getBoundingClientRect();
+  //     // console.log(position);
+  //     if (position.top >= 0 && position.bottom <= window.innerHeight) {
+  //       setIsvisible(true);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
 
   return (
-    <div className="services--container">
+    <div
+      className={`services--container`}
+    >
+      <h1 className="services--header">Services we provide</h1>
       <Slider {...settings}>
         {Datas.map((Data) => (
           <div className="services">
