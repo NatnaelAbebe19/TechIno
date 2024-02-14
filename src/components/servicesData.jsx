@@ -10,7 +10,7 @@ const data = [
     imag: "src/components/images/apps.png",
   },
   {
-    title: "Software Mentainance",
+    title: "Software Maintenance",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     imag: "src/components/images/Software-maintenance-services.png",
   },
