@@ -20,7 +20,7 @@ const data = [
     imag: "src/components/images/graphics.jpg",
   },
   {
-    title: "Content Creating",
+    title: "Content Creation",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     imag: "src/components/images/Content creation.png",
   },

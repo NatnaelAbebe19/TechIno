@@ -59,7 +59,15 @@ export default function Footer() {
             {<FaPhone />}
             <a href="tel:+251919172574">+251 919 172 574</a>
           </li>
-          <li>{<IoMdHome className="home" />}Informatics Lab last floor</li>
+          <li>
+            {<IoMdHome className="home" />}
+            <a
+              href="https://www.google.com/maps/place/TechIno+Club/@11.0489364,39.7469392,17z/data=!4m6!3m5!1s0x16479dd051a0f277:0xf630674a681e9ba5!8m2!3d11.0489311!4d39.7495141!16s%2Fg%2F11ty71285r?entry=ttu"
+              target="_blank"
+            >
+              Informatics Lab last floor
+            </a>
+          </li>
         </ul>
       </div>
 
