@@ -5,6 +5,7 @@ import Signup from "./components/Signup";
 import Footer from "./components/footer";
 import Error from "./components/Error";
 import Blog from "./components/Blog";
+import Contact from "./components/ContactUs";
 import SharedLayout from "./components/SharedLayout";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -24,6 +25,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="contact" element={<Contact />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>

@@ -53,7 +53,7 @@ function Blog() {
             <div className="profile--notation">
               <p className="profile--name">{Data.name}</p>
               <p className="profile--description">{Data.description}</p>
-              <a className="profile--btn1">Read More</a>
+              <a className="bn5">Read More</a>
             </div>
           </div>
         ))}

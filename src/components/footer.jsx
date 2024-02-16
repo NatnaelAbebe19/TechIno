@@ -57,7 +57,7 @@ export default function Footer() {
           </li>
           <li>
             {<FaPhone />}
-            <a href="tel:+251919172574">+251 919 172 574</a>
+            <a href="tel:+251943535083">+251 943 535 083</a>
           </li>
           <li>
             {<IoMdHome className="home" />}
@@ -67,7 +67,7 @@ export default function Footer() {
             >
               Informatics Lab last floor
             </a>
-          </li>
+          </li>   
         </ul>
       </div>
 

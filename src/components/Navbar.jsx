@@ -29,14 +29,11 @@ export default function Navbar() {
     }
   }, [screenWidth]);
 
-  // const menu = document.querySelector(".open");
-  // window.addEventListener("click", (event) => {
-  //   if (screenWidth < 768) {
-  //     if (event.target !== menu) {
-  //       setShowMenu(false);
-  //     }
-  //   }
-  // });
+  function handleMenuItemClick() {
+    if (screenWidth < 768) {
+      setShowMenu(false);
+    }
+  }
 
   function handleHamburger() {
     setShowMenu((prev) => !prev);
@@ -44,7 +41,7 @@ export default function Navbar() {
 
   return (
     <nav className="menu-items">
-      <div className="logo">
+      <div className="logo" onClick={handleMenuItemClick}>
         <Link to="/">
           <img src={logo} alt="logo of TECHINO" className="logo__image" />
         </Link>
@@ -63,6 +60,7 @@ export default function Navbar() {
           className={({ isActive }) => {
             return isActive ? "link active" : "link";
           }}
+          onClick={handleMenuItemClick}
         >
           Home
         </NavLink>
@@ -71,6 +69,7 @@ export default function Navbar() {
           className={({ isActive }) => {
             return isActive ? "link active" : "link";
           }}
+          onClick={handleMenuItemClick}
         >
           About
         </NavLink>
@@ -79,6 +78,7 @@ export default function Navbar() {
           className={({ isActive }) => {
             return isActive ? "link active" : "link";
           }}
+          onClick={handleMenuItemClick}
         >
           Event
         </NavLink>
@@ -87,6 +87,7 @@ export default function Navbar() {
           className={({ isActive }) => {
             return isActive ? "link active" : "link";
           }}
+          onClick={handleMenuItemClick}
         >
           Login
         </NavLink>
@@ -95,8 +96,18 @@ export default function Navbar() {
           className={({ isActive }) => {
             return isActive ? "link active" : "link";
           }}
+          onClick={handleMenuItemClick}
         >
           Signup
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => {
+            return isActive ? "link active" : "link";
+          }}
+          onClick={handleMenuItemClick}
+        >
+          Contact us
         </NavLink>
       </ul>
     </nav>
