@@ -34,6 +34,7 @@ export default function Navbar() {
       setShowMenu(false);
     }
   }
+  
 
   function handleHamburger() {
     setShowMenu((prev) => !prev);

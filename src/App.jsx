@@ -12,10 +12,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  // const [show, setShow] = useState(false);
-  // // function handleBody() {
-
-  // // }
   return (
     <section className="app--container">
       <BrowserRouter>
@@ -30,11 +26,6 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      {/* <Navbar /> */}
-      {/* <Mains /> */}
-      {/* <Login /> */}
-      {/* <Signup /> */}
-      {/* <Footer /> */}
     </section>
   );
 }
