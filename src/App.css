@@ -763,7 +763,24 @@ a.service--btn--link span {
 .error--container {
   height: 100vh;
 }
-/* Media Queries */
+
+/************ Media Queries ******************/
+
+/****************** 620 *************/
+
+@media screen and (min-width: 620px) {
+  .project--container {
+    flex-direction: row;
+  }
+  .project--description {
+    order: 1;
+  }
+  .project--container:nth-child(even) .project--description {
+    order: -1;
+  }
+}
+
+/****************** 768 *************/
 
 @media screen and (min-width: 768px) {
   .contact--container {
@@ -838,17 +855,88 @@ a.service--btn--link span {
   .menu-items .link:hover {
     transform: scale(1.2);
   }
-}
-/*Hero*/
-
-@media screen and (min-width: 768px) {
   .main--container .main--header {
     font-size: 2rem;
   }
+  .services--image {
+    width: 37rem;
+    overflow: hidden;
+  }
+  a.service--btn--link {
+    padding: 15px 30px;
+  }
+  .services--title {
+    font-size: 2.5em;
+  }
+  a.service--btn--link span {
+    font-size: 1.2rem;
+  }
+  .services--description {
+    display: block;
+    padding: 7px;
+  }
+  .services--header {
+    font-size: 2.2rem;
+  }
+  .project--container {
+    flex-direction: row;
+  }
+  .project--image,
+  .project--description {
+    width: 370px;
+    height: 300px;
+  }
+  .project--description {
+    padding: 2rem;
+  }
+  .project--title {
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+  }
+  .porjects--header {
+    font-size: 2.1rem;
+  }
+  .project--text p {
+    justify-self: stretch;
+    margin: 0;
+    line-height: 1.8;
+  }
 }
+
+/****************** 1024 *************/
+
 @media screen and (min-width: 1024px) {
   .main--container .main--header {
     font-size: 3rem;
+  }
+  .services--image {
+    width: 50rem;
+    overflow: hidden;
+  }
+  .project--image,
+  .project--description {
+    width: 470px;
+    height: 470px;
+  }
+  .project--description {
+    padding: 4rem;
+  }
+  .project--text p {
+    justify-self: stretch;
+    margin: 0;
+  }
+  .porjects--header {
+    font-size: 2.5rem;
+  }
+}
+
+/****************** 1024 *************/
+
+@media screen and (min-width: 1330px) {
+  .project--image,
+  .project--description {
+    width: 610px;
+    height: 610px;
   }
 }
 
@@ -890,107 +978,5 @@ a.service--btn--link span {
   }
   .copy {
     grid-column: 1;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .services--image {
-    width: 37rem;
-    overflow: hidden;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .services--image {
-    width: 50rem;
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  a.service--btn--link {
-    padding: 15px 30px;
-  }
-  .services--title {
-    font-size: 2.5em;
-  }
-  a.service--btn--link span {
-    font-size: 1.2rem;
-  }
-  .services--description {
-    display: block;
-    padding: 7px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .services--header {
-    font-size: 2.2rem;
-  }
-}
-@media screen and (min-width: 620px) {
-  .project--container {
-    flex-direction: row;
-  }
-  .project--description {
-    order: 1;
-  }
-  .project--container:nth-child(even) .project--description {
-    order: -1;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .project--container {
-    flex-direction: row;
-  }
-  .project--image,
-  .project--description {
-    width: 370px;
-    height: 300px;
-  }
-  .project--description {
-    padding: 2rem;
-  }
-  .project--title {
-    font-size: 2.2rem;
-    padding-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .project--image,
-  .project--description {
-    width: 470px;
-    height: 470px;
-  }
-  .project--description {
-    padding: 4rem;
-  }
-  .project--text p {
-    justify-self: stretch;
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 1330px) {
-  .project--image,
-  .project--description {
-    width: 610px;
-    height: 610px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .porjects--header {
-    font-size: 2.1rem;
-  }
-  .project--text p {
-    justify-self: stretch;
-    margin: 0;
-    line-height: 1.8;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .porjects--header {
-    font-size: 2.5rem;
   }
 }
