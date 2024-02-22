@@ -456,7 +456,7 @@
   height: 200px;
   border-radius: 50%;
   margin: auto;
-  overflow: hidden;
+  overflow: auto;
 }
 .profile--image img {
   width: 100%;
@@ -648,24 +648,64 @@ a.service--btn--link span {
 }
 
 /* Projects */
+.project--image--container {
+  position: relative;
+  width: 100%;
+}
+
 .project--container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  position: relative;
+  width: fit-content;
+  margin: 0rem auto 2rem;
+  transition: all 0.5s ease;
 }
-.project--image,
-.project--description {
+.project--image--container {
   width: 300px;
-  height: 300px;
-  background: rgb(21, 255, 0);
+}
+.project--image {
+  transition: all 0.5s ease;
+  width: 100%;
+  height: auto;
+}
+.project--described {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  color: #fff;
+  overflow: auto;
+  width: 90%;
+  transition: all 0.5s ease;
+}
+.project--described h1 {
+  text-align: center;
+}
+.project--container:hover .project--button {
+  display: block;
+}
+
+.project--container:hover .project--image {
+  filter: brightness(0.6);
 }
 .project--description {
   padding: 1.2rem;
   box-sizing: border-box;
   overflow: auto;
 }
+.project--button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 33;
+  display: none;
+}
+
 .project--title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -763,10 +803,65 @@ a.service--btn--link span {
 .error--container {
   height: 100vh;
 }
+.messageDialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 11121;
+  align-items: center;
+  opacity: 0;
+  animation: animate--popup ease-in-out forwards;
+  animation-duration: 0.6s;
+  transition: all 0.5s ease;
+}
+@keyframes animate--popup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.messageDialog .description--mobile {
+  padding: 2rem;
+  background: rgb(56, 69, 90);
+  color: #fff;
+  /* width: 80%; */
+  border-radius: 15px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.1);
+  position: relative;
+  overflow: hidden;
+  line-height: 1.5;
+}
 
+.description--close {
+  position: absolute;
+  right: 1rem;
+  top: 0rem;
+  border-radius: 0 15px 0px 15px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.description--close:hover {
+  opacity: 0.7;
+}
+
+.inner--popup {
+  position: relative;
+}
 /************ Media Queries ******************/
 
-/****************** 620 *************/
+/****************** 620px *************/
 
 @media screen and (min-width: 620px) {
   .project--container {
@@ -777,6 +872,9 @@ a.service--btn--link span {
   }
   .project--container:nth-child(even) .project--description {
     order: -1;
+  }
+  .project--image--container {
+    width: 500px;
   }
 }
 
@@ -806,7 +904,27 @@ a.service--btn--link span {
     animation-name: animate;
     animation-duration: 0.5s;
   }
-
+  .title--first,
+  .description--first {
+    display: block;
+  }
+  .project--button {
+    display: none;
+  }
+  .project--described {
+    width: 70%;
+    line-height: 1.5;
+  }
+  .project--described h1 {
+    font-size: 2.7rem;
+    margin: 1rem;
+  }
+  .project--container:hover .project--described {
+    display: block;
+  }
+  .project--container:hover .project--button {
+    display: none;
+  }
   .logo {
     width: 160px;
     top: 0;
@@ -881,11 +999,17 @@ a.service--btn--link span {
   .project--container {
     flex-direction: row;
   }
-  .project--image,
-  .project--description {
-    width: 370px;
-    height: 300px;
+  .project--image--container {
+    width: 600px;
   }
+  /* .project--image,
+  .project--description {
+    width: 
+    width: 100%;
+    height: 100%;
+    width: 650px;
+    height: 450px;
+  } */
   .project--description {
     padding: 2rem;
   }
@@ -913,11 +1037,16 @@ a.service--btn--link span {
     width: 50rem;
     overflow: hidden;
   }
-  .project--image,
-  .project--description {
-    width: 470px;
-    height: 470px;
+  .project--image--container {
+    width: 800px;
   }
+  /* .project--image,
+  .project--description {
+    width: 100%;
+    height: 100%;
+    width: 800px;
+    height: 550px;
+  } */
   .project--description {
     padding: 4rem;
   }
@@ -932,11 +1061,17 @@ a.service--btn--link span {
 
 /****************** 1024 *************/
 
-@media screen and (min-width: 1330px) {
-  .project--image,
+@media screen and (min-width: 1440px) {
+  /* .project--image,
   .project--description {
     width: 610px;
     height: 610px;
+  } */
+  .porjects--header {
+    font-size: 4rem;
+  }
+  .project--image--container {
+    width: 1000px;
   }
 }
 

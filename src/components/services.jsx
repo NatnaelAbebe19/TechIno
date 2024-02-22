@@ -9,6 +9,8 @@ export default function services() {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
+    autoplay: true,
+    autoPlaySpeed: 2000,
   };
 
   // const [isVisible, setIsvisible] = useState(false);
