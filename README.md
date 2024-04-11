@@ -1,8 +1,9 @@
-# React + Vite
+# Techino Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Welcome to the official repository of Techino Club! Here you'll find a variety of tasks and projects related to technology that we offer to students on our campus. Whether you're a seasoned techie or just getting started, there's something here for you to explore and learn from.
 
-Currently, two official plugins are available:
+## Technologies used 
+- React js
+- HTML
+- CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
