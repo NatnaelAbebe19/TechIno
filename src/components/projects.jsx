@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import oneCard from "./images/oneCard.jpg";
+import oneCard from "/oneCard.jpg";
 import Datas from "./Projectstdata";
 
 export default function projects() {
@@ -45,15 +45,4 @@ export default function projects() {
       ))}
     </section>
   );
-}
-{
-  /* <button className="project--button bn5">Read More</button> */
-}
-{
-  /* <div className="project--description">
-            <div className="project--title">
-            </div>
-            <div className="project--text">
-            </div>
-          </div> */
 }

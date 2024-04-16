@@ -1,5 +1,5 @@
 import React from "react";
-import rightPng from "./images/contact svg.png";
+import rightPng from "/contact svg.png";
 
 export default function ContactUs() {
   return (

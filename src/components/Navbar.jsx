@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
-import logo from "./images/circular logos.png";
+import logo from "/circular logos.png";
 import debounce from "lodash.debounce";
 import { Link, NavLink } from "react-router-dom";
 

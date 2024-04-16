@@ -13,30 +13,8 @@ export default function services() {
     autoPlaySpeed: 2000,
   };
 
-  // const [isVisible, setIsvisible] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const element = document.getElementById("services--containers");
-  //     const position = element.getBoundingClientRect();
-  //     // console.log(position);
-  //     if (position.top >= 0 && position.bottom <= window.innerHeight) {
-  //       setIsvisible(true);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-
   return (
-    <div
-      className={`services--container`}
-    >
+    <div className={`services--container`}>
       <h1 className="services--header">Services we provide</h1>
       <Slider {...settings}>
         {Datas.map((Data) => (
